@@ -8,6 +8,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @layer base {
@@ -109,5 +112,35 @@ body {
   }
   .items-center {
     justify-content: center;
+  }
+  .gap-14 {
+    gap: 10px;
+  }
+  .text-6xl {
+    font-size: 4xl;
+  }
+  .mb-40 {
+    margin-bottom: 20px;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.icon {
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
