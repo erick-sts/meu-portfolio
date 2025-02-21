@@ -15,14 +15,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   HoverCard,
   HoverCardContent,
@@ -35,6 +28,7 @@ import {
   FaMicrosoft,
   FaLinkedin,
 } from "react-icons/fa";
+import { Progress } from "@/components/ui/progress";
 
 export default function Home() {
   //
@@ -105,7 +99,7 @@ export default function Home() {
                   <HoverCard>
                     <HoverCardTrigger>Curriculo</HoverCardTrigger>
                     <HoverCardContent className="w-96 text-justify break-words whitespace-normal border-slate-500 bg-gray-700 text-slate-200">
-                      <p className="text-xl">Erick Oliveira Nascimento</p>
+                      <p className="text-xl">Qualificações</p>
                       <Separator className="my-4" />
                       <p>Técnico em Informática - Etec Fernando Prestes</p>
                       <p>Técnico em Contabilidade - Etec Cotia</p>
@@ -136,43 +130,101 @@ export default function Home() {
           className="h-screen flex items-center justify-center bg-gray-800 mt-20"
         >
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-semibold">Sobre Mim</h2>
+            <h2 className="text-2xl font-semibold">Sobre Mim</h2>
 
-            <Card className="border-slate-400 bg-gray-500 w-3/5 mt-20 flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-3xl text-center">
-                  Erick Oliveira Nascimento
-                </CardTitle>
-                <CardDescription>
-                  <p className="text-slate-950 mt-4 text-center text-base">
-                    Desenvolvedor Full Stack apaixonado por tecnologia, com
-                    experiência em aplicações web e mobile. Busco sempre
-                    inovação, eficiência e soluções escaláveis.
-                  </p>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-justify">
-                  Atualmente, atuo no desenvolvimento de software
-                  multiplataforma e estou cursando minha graduação na Fatec
-                  Votorantim, com conclusão prevista para dezembro de 2025.
-                  Tenho experiência prática com TypeScript, Python, Node.js,
-                  Angular, React, React Native, Next.js, SQL e NoSQL, adquirida
-                  por meio de projetos acadêmicos, iniciativas próprias e
-                  atuação profissional. Já desenvolvi soluções para a secretaria
-                  acadêmica da Fatec Votorantim e contribui para sistemas
-                  corporativos, aplicando tecnologia para otimizar processos e
-                  resolver desafios de forma eficiente. Além das habilidades
-                  técnicas, destaco minha capacidade de trabalho em equipe,
-                  rápida adaptação a novas tecnologias e abordagem proativa na
-                  resolução de problemas. Busco constantemente a excelência,
-                  agregando valor a cada projeto e superando expectativas.
-                </p>
-              </CardContent>
-              <CardFooter className="justify-center text-base">
-                <p>💻 Programando de dia, sonhando com código à noite! 🐑</p>
-              </CardFooter>
-            </Card>
+            <div className="flex flex-col justify-center gap-6 mt-10">
+              <div className="flex flex-row gap-24 flex-wrap justify-center">
+                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-2 card-hover">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-center">
+                      Quem sou eu?
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-950 mt-2 text-center text-base">
+                      Erick Oliveira Nascimento
+                    </p>
+                    <p className="text-justify">
+                      Desenvolvedor Full Stack apaixonado por tecnologia, com
+                      experiência em aplicações web e mobile. Busco sempre
+                      inovação, eficiência e soluções escaláveis.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-slate-400 bg-gray-500 w-96 h-80 flex flex-col transform -rotate-2 card-hover">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-center">
+                      Formação e Conhecimento
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-justify">
+                      Atualmente, atuo no desenvolvimento de software
+                      multiplataforma e estou cursando minha graduação na Fatec
+                      Votorantim, com conclusão prevista para dezembro de 2025.
+                    </p>
+                    <p className="text-justify">
+                      Tenho experiência prática com TypeScript, Python, Node.js,
+                      Angular, React, React Native, Next.js, SQL e NoSQL,
+                      adquirida por meio de projetos acadêmicos, iniciativas
+                      próprias e atuação profissional.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-1 card-hover">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-center">
+                      Experiência e Projetos
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-justify">
+                      Já desenvolvi soluções para a secretaria acadêmica da
+                      Fatec Votorantim e contribui para sistemas corporativos,
+                      aplicando tecnologia para otimizar processos e resolver
+                      desafios de forma eficiente.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div className="flex flex-row gap-24 items-center justify-center mt-6 flex-wrap">
+                <Card className="border-slate-400 bg-gray-500 w-96 h-72 flex flex-col transform -rotate-1 card-hover">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-center">
+                      Habilidades e Diferenciais
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-justify">
+                      Além das habilidades técnicas, destaco minha capacidade de
+                      trabalho em equipe, rápida adaptação a novas tecnologias e
+                      abordagem proativa na resolução de problemas.
+                    </p>
+                    <p className="text-justify">
+                      Busco constantemente a excelência, agregando valor a cada
+                      projeto e superando expectativas.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-slate-400 bg-gray-500 w-80 h-52 flex flex-col transform rotate-3 card-hover">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-center">
+                      Atenção{" "}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-center">
+                      🔧 Assim como no desenvolvimento de software, na vida a
+                      gente compila, depura e refatora até encontrar a melhor
+                      versão de si mesmo.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -181,7 +233,20 @@ export default function Home() {
           ref={projectsRef}
           className="h-screen flex items-center justify-center bg-gray-700"
         >
-          <h2 className="text-3xl font-semibold">Projetos</h2>
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl font-semibold">Projetos</h2>
+            <Card className="border-slate-400 bg-gray-500 w-96 p-5 h-60 flex flex-col mt-10 card-hover">
+              <CardHeader>
+                <CardTitle className="text-xl text-center">Em Breve</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center">
+                  Aguarde! Em breve, novos projetos serão adicionados aqui.
+                </p>
+              </CardContent>
+              <Progress value={62} />
+            </Card>
+          </div>
         </section>
 
         {/* CONTATO */}
