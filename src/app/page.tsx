@@ -39,7 +39,7 @@ export default function Home() {
   //
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollToSection = (ref: any) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   //
   return (
@@ -141,10 +141,10 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-950 mt-2 text-center text-base">
+                    <p className="mt-2 text-justify text-base">
                       Erick Oliveira Nascimento
                     </p>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Desenvolvedor Full Stack apaixonado por tecnologia, com
                       experiência em aplicações web e mobile. Busco sempre
                       inovação, eficiência e soluções escaláveis.
@@ -159,12 +159,12 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Atualmente, atuo no desenvolvimento de software
                       multiplataforma e estou cursando minha graduação na Fatec
                       Votorantim, com conclusão prevista para dezembro de 2025.
                     </p>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Tenho experiência prática com TypeScript, Python, Node.js,
                       Angular, React, React Native, Next.js, SQL e NoSQL,
                       adquirida por meio de projetos acadêmicos, iniciativas
@@ -180,7 +180,7 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Já desenvolvi soluções para a secretaria acadêmica da
                       Fatec Votorantim e contribui para sistemas corporativos,
                       aplicando tecnologia para otimizar processos e resolver
@@ -197,12 +197,12 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Além das habilidades técnicas, destaco minha capacidade de
                       trabalho em equipe, rápida adaptação a novas tecnologias e
                       abordagem proativa na resolução de problemas.
                     </p>
-                    <p className="text-justify">
+                    <p className="text-justify text-base">
                       Busco constantemente a excelência, agregando valor a cada
                       projeto e superando expectativas.
                     </p>
@@ -216,7 +216,7 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-center">
+                    <p className="text-justify text-base">
                       🔧 Assim como no desenvolvimento de software, na vida a
                       gente compila, depura e refatora até encontrar a melhor
                       versão de si mesmo.
@@ -300,15 +300,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <footer className="bg-gray-800 text-center p-4">
+          <p className="text-white">
+            &copy; {new Date().getFullYear()} Erick Nascimento. Todos os
+            direitos reservados.
+          </p>
+        </footer>
       </main>
-
-      {/* FOOTER */}
-      <footer className="bg-gray-800 text-center p-4">
-        <p className="text-white">
-          &copy; {new Date().getFullYear()} Erick Nascimento. Todos os direitos
-          reservados.
-        </p>
-      </footer>
     </>
   );
 }
