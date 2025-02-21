@@ -59,13 +59,12 @@ export default function Home() {
 
       <section
         ref={initRef}
-        className="h-screen flex items-center justify-center text-center"
+        className="h-screen flex items-center justify-center text-center mt-16"
       >
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center flex-wrap justify-center">
           {/* Texto */}
           <div className="w-96">
             <div className="flex flex-col items-center">
-              <div></div>
               <TypingEffect />
               <Separator className="my-4" />
 
@@ -100,8 +99,8 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="ml-28">
-            <Avatar className="w-96 h-96 rounded-full">
+          <div className="ml-28 flex justify-center">
+            <Avatar className="w-96  h-auto rounded-full">
               <AvatarImage src="/me.JPEG" alt="Erick Nascimento" />
               <AvatarFallback className="w-96 h-96 rounded-full bg-gray-800" />
             </Avatar>
@@ -112,10 +111,10 @@ export default function Home() {
       {/* SOBRE */}
       <section
         ref={aboutRef}
-        className="h-screen flex items-center justify-center bg-gray-800"
+        className="h-screen flex items-center justify-center bg-gray-800 mt-20"
       >
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold -mt-10">Sobre Mim</h2>
+          <h2 className="text-3xl font-semibold">Sobre Mim</h2>
 
           <Card className="border-slate-400 bg-gray-500 w-3/5 mt-20 flex flex-col">
             <CardHeader>
