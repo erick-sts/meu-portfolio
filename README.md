@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Portfólio Pessoal
 
-## Getting Started
+Este é o meu portfólio pessoal desenvolvido com Next.js e shadcn. O objetivo do projeto é apresentar minhas habilidades, experiências e projetos desenvolvidos.
 
-First, run the development server:
+Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Next.js - Framework React para aplicações web
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+shadcn - Biblioteca de componentes estilizados
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tailwind CSS - Para estilização rápida e responsiva
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TypeScript - Tipagem estática para JavaScript
 
-## Learn More
+Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+Apresentação pessoal e contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Seção de projetos com descrição e links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Experiência profissional e habilidades
 
-## Deploy on Vercel
+Dark Mode
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Como Rodar o Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Clone o repositório:
+
+```git clone https://github.com/erick-sts/meu-portfolio```
+
+Acesse a pasta do projeto:
+
+```cd portfolio```
+
+Instale as dependências:
+
+```npm install```
+
+ou
+
+```yarn install```
+
+Inicie o servidor de desenvolvimento:
+
+```npm run dev```
+
+ou
+
+```yarn dev```
+
+Acesse http://localhost:3000 no navegador.
+
+Contato
+
+Se quiser entrar em contato comigo, me encontre em:
+
+LinkedIn: https://www.linkedin.com/in/erick-nascimento-b560b5126/
+
+E-mail: erick.sts.eo@gmail.com
