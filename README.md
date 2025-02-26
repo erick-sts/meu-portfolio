@@ -2,6 +2,9 @@
 
 Este é o meu portfólio pessoal desenvolvido com Next.js e shadcn. O objetivo do projeto é apresentar minhas habilidades, experiências e projetos desenvolvidos.
 
+#### [Acesse aqui](https://meu-portfolio-omega-three.vercel.app/)
+
+
 ### 🚀 Tecnologias Utilizadas
 
 ⚡ Next.js - Framework React para aplicações web
