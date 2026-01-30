@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import TypingEffect from "@/components/TypingEffect";
+import Reveal from "@/components/Reveal";
 import { Separator } from "@/components/ui/separator";
 import {
   AlertDialog,
@@ -70,11 +71,15 @@ export default function Home() {
             {/* Texto */}
             <div className="w-96">
               <div className="flex flex-col items-center">
-                <TypingEffect />
+                <div className="animate-fade-in-up">
+                  <TypingEffect />
+                </div>
                 <Separator className="my-4" />
 
                 <AlertDialog>
-                  <AlertDialogTrigger>Full Stack Developer</AlertDialogTrigger>
+                  <AlertDialogTrigger className="transition-colors hover:text-primary">
+                    Full Stack Developer
+                  </AlertDialogTrigger>
                   <AlertDialogContent className="bg-gray-700 border-slate-500">
                     <AlertDialogHeader>
                       <AlertDialogTitle className="text-slate-200">
@@ -88,35 +93,37 @@ export default function Home() {
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogAction className="text-slate-200">
+                      <AlertDialogAction className="text-black bg-white hover:bg-gray-200">
                         Ok
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
 
-                <Button className="mt-4" variant="ghost">
-                  <HoverCard>
-                    <HoverCardTrigger>Curriculo</HoverCardTrigger>
-                    <HoverCardContent className="w-96 text-justify break-words whitespace-normal border-slate-500 bg-gray-700 text-slate-200">
-                      <p className="text-xl">Qualificações</p>
-                      <Separator className="my-4" />
-                      <p>Técnico em Informática - Etec Fernando Prestes</p>
-                      <p>Técnico em Contabilidade - Etec Cotia</p>
-                      <p>
-                        Desenvolvimento de Software Multiplataforma - Fatec
-                        Votorantim (Cursando)
-                      </p>
-                      <Separator className="my-4" />
-                      <p>Ingles</p>
-                      <p>Francês</p>
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <Button className="mt-4 transition-all duration-200 ease-out hover:scale-105 hover:bg-slate-600 hover:text-white" variant="ghost">
+                      Curriculo
+                    </Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-96 text-justify break-words whitespace-normal border-slate-500 bg-gray-700 text-slate-200">
+                    <p className="text-xl">Qualificações</p>
+                    <Separator className="my-4" />
+                    <p>Técnico em Informática - Etec Fernando Prestes</p>
+                    <p>Técnico em Contabilidade - Etec Cotia</p>
+                    <p>
+                      Desenvolvimento de Software Multiplataforma - Fatec
+                      Votorantim (Cursando)
+                    </p>
+                    <Separator className="my-4" />
+                    <p>Ingles</p>
+                    <p>Francês</p>
                     </HoverCardContent>
                   </HoverCard>
-                </Button>
               </div>
             </div>
             <div className="ml-28 flex justify-center">
-              <Avatar className="w-96  h-auto rounded-full">
+              <Avatar className="w-96  h-auto rounded-full animate-float shadow-lg">
                 <AvatarImage src="/me.JPEG" alt="Erick Nascimento" />
                 <AvatarFallback className="w-96 h-96 rounded-full bg-gray-800" />
               </Avatar>
@@ -129,12 +136,15 @@ export default function Home() {
           ref={aboutRef}
           className="h-screen flex items-center justify-center bg-gray-800 mt-20"
         >
-          <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-semibold">Sobre Mim</h2>
+          <Reveal className="w-full">
+            <div className="flex flex-col items-center">
+              <h2 className="text-2xl font-semibold animate-fade-in-up">
+                Sobre Mim
+              </h2>
 
             <div className="flex flex-col justify-center gap-6 mt-10">
               <div className="flex flex-row gap-24 flex-wrap justify-center">
-                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-2 card-hover">
+                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-2 card-hover animate-fade-in-up delay-75">
                   <CardHeader>
                     <CardTitle className="text-xl text-center">
                       Quem sou eu?
@@ -152,7 +162,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-slate-400 bg-gray-500 w-96 h-80 flex flex-col transform -rotate-2 card-hover">
+                <Card className="border-slate-400 bg-gray-500 w-96 h-80 flex flex-col transform -rotate-2 card-hover animate-fade-in-up delay-150">
                   <CardHeader>
                     <CardTitle className="text-xl text-center">
                       Formação e Conhecimento
@@ -173,7 +183,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-1 card-hover">
+                <Card className="border-slate-400 bg-gray-500 w-80 h-60 flex flex-col transform rotate-1 card-hover animate-fade-in-up delay-200">
                   <CardHeader>
                     <CardTitle className="text-xl text-center">
                       Experiência e Projetos
@@ -190,7 +200,7 @@ export default function Home() {
                 </Card>
               </div>
               <div className="flex flex-row gap-24 items-center justify-center mt-6 flex-wrap">
-                <Card className="border-slate-400 bg-gray-500 w-96 h-72 flex flex-col transform -rotate-1 card-hover">
+                <Card className="border-slate-400 bg-gray-500 w-96 h-72 flex flex-col transform -rotate-1 card-hover animate-fade-in-up delay-100">
                   <CardHeader>
                     <CardTitle className="text-xl text-center">
                       Habilidades e Diferenciais
@@ -209,7 +219,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-slate-400 bg-gray-500 w-80 h-52 flex flex-col transform rotate-3 card-hover">
+                <Card className="border-slate-400 bg-gray-500 w-80 h-52 flex flex-col transform rotate-3 card-hover animate-fade-in-up delay-150">
                   <CardHeader>
                     <CardTitle className="text-xl text-center">
                       Atenção{" "}
@@ -226,6 +236,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </Reveal>
         </section>
 
         {/* PROJETOS */}
